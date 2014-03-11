@@ -2,9 +2,7 @@ package JsonSoapProxyLib
 
 import (
 	"encoding/json"
-	_ "errors"
 	"fmt"
-	_ "unicode/utf8"
 )
 
 type RequestLookupItem struct {

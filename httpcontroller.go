@@ -1,15 +1,10 @@
 package JsonSoapProxyLib
 
 import (
-	_ "encoding/json"
-	_ "errors"
 	"fmt"
-	_ "github.com/nu7hatch/gouuid"
 	"io/ioutil"
-	_ "log"
 	"net/http"
 	"net/url"
-	_ "unicode/utf8"
 )
 
 var soapRequester SoapRequester
