@@ -39,6 +39,7 @@ func (w *SoapRequest) RequestWebService(bodyUnscaped string, request IRequest, e
 		return "", err
 	}
 
+	fmt.Println("request: ", newRequest.(IRequest).GetQuery())
 	MakeRequest(url, newRequest.(IRequest).GetQuery(), newEnv)
 
 	response := struct {

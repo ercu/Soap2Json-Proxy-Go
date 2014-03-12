@@ -29,6 +29,7 @@ func MakeRequest(url string, query string, v interface{}) bool {
 	}
 	response, _ := ioutil.ReadAll(r.Body)
 
+	fmt.Println("response: ", string(response))
 	responseStr := strings.Replace(string(response), "soap:", "", -1)
 
 	responseStr = strings.Replace(string(responseStr), "utf-16", "utf-8", -1)
