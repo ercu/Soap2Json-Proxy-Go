@@ -1,4 +1,4 @@
-package JsonSoapProxyLib
+package mfslib
 
 import (
 	"fmt"
@@ -25,6 +25,17 @@ type ListManagementEnvelope struct {
 				} `xml:"transaction_body", json:"transaction_body"`
 			} `xml:"ViewListResult"`
 		} `xml:"ViewListResponse"`
+
+		//Sample fields for SoapFault messages
+		Fault struct {
+			Detail struct {
+				ServiceFaultDetail struct {
+					RefNo        string `xml:"retrieval_reference_no, json:"refNo`
+					ResponseCode string `xml:"response_code", json:"responseCode"`
+					ResponseDesc string `xml:"response_desc", json:"responseDesc"`
+				} `xml:"ServiceFaultDetail"`
+			} `xml:"detail"`
+		} `xml:"Fault"`
 	} `xml:"Body"`
 }
 
