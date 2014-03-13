@@ -78,10 +78,10 @@ func Test_CanGenerateSoapRequest(t *testing.T) {
 	listManagementRequest.ClientId = "12345"
 	listManagementRequest.DateTime = "11112223345"
 	listManagementRequest.ReferenceNo = "4555"
-	listManagementRequest.SendSms = "904505123123"
-	listManagementRequest.SendSmsLanguage = "sesefr"
+	listManagementRequest.SendSms = "Y"
+	listManagementRequest.SendSmsLanguage = "eng"
 
-	listManagementRequest.Msisdn = "905052128687"
+	listManagementRequest.Msisdn = "905051234567"
 	listManagementRequest.ListType = "Phone"
 	queryResult := listManagementRequest.GetQuery()
 
